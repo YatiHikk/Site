@@ -29,12 +29,16 @@ transitions
 html {
   background-color: $color-light;
   font-family: Candara, serif;
+  height:100%
 }
 
 html, body {
   margin: 0;
-  height: 100%;
   min-width: $page-min-width;
+}
+
+body {
+  min-height: 100%;
 }
 
 .preload * {

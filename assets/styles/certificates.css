@@ -12,12 +12,16 @@ transitions
 html {
   background-color: #FFF;
   font-family: Candara, serif;
+  height: 100%;
 }
 
 html, body {
   margin: 0;
-  height: 100%;
   min-width: 720px;
+}
+
+body {
+  min-height: 100%;
 }
 
 .preload * {
@@ -40,12 +44,16 @@ transitions
 html {
   background-color: #FFF;
   font-family: Candara, serif;
+  height: 100%;
 }
 
 html, body {
   margin: 0;
-  height: 100%;
   min-width: 720px;
+}
+
+body {
+  min-height: 100%;
 }
 
 .preload * {
@@ -196,12 +204,16 @@ transitions
 html {
   background-color: #FFF;
   font-family: Candara, serif;
+  height: 100%;
 }
 
 html, body {
   margin: 0;
-  height: 100%;
   min-width: 720px;
+}
+
+body {
+  min-height: 100%;
 }
 
 .preload * {
@@ -254,12 +266,16 @@ transitions
 html {
   background-color: #FFF;
   font-family: Candara, serif;
+  height: 100%;
 }
 
 html, body {
   margin: 0;
-  height: 100%;
   min-width: 720px;
+}
+
+body {
+  min-height: 100%;
 }
 
 .preload * {
@@ -333,8 +349,8 @@ main {
   place-items: center;
   padding: 50px 50px 100px;
   width: 100%;
-  height: fit-content;
-  min-height: calc(100% - 160px - 150px);
+  min-height: 100%;
+  height: calc(100% - 160px - 150px);
 }
 main .card {
   height: 100%;

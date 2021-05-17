@@ -8,8 +8,8 @@ main {
   @include center-items-by-grid;
   padding: 50px 50px 100px;
   width: 100%;
-  height: fit-content;
-  min-height: calc(100% - #{$header-height} - 150px);
+  min-height: 100%;
+  height: calc(100% - #{$header-height} - 150px);
 
   .card {
     height: 100%;
