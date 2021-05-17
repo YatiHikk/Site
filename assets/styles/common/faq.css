@@ -1,0 +1,60 @@
+/*
+attribute ordering convention:
+mixins
+alignment items (ie display)
+alignment self
+size
+visual
+font & text
+transitions
+ */
+html {
+  background-color: #FFF;
+  font-family: Candara, serif;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  min-width: 720px;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+.faq-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 25px;
+  bottom: 0;
+  transition-duration: 0ms;
+  transition-delay: 0ms;
+}
+.faq-box figure {
+  display: grid;
+  place-items: center;
+  width: 70px;
+  cursor: pointer;
+}
+.faq-box figure figcaption {
+  white-space: nowrap;
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+}
+
+@media only screen and (max-width: 920px) {
+  .faq-box figure figcaption {
+    overflow: hidden;
+    width: 0;
+    height: 0;
+  }
+}
+
+/*# sourceMappingURL=faq.css.map */

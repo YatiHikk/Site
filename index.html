@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Сервис видеоконсультаций с психотерапевтом. Видеочат. 1500 ₽/сессия. Психологическая помощь. Полная конфиденциальность.">
+    <meta name="viewport" content="width=device-width, initial-scale=2.0">
+    <title>Принятие</title>
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet">
+    <script defer src="bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- Stylesheets -->
+    <link href="assets/styles/main.css" rel="stylesheet">
+</head>
+<body class="preload">
+<header>
+    <a class="logo-box" href="index.html"><img src="assets/images/common/logo-no-stroke.svg" alt="logo"></a>
+    <div class="name-field"><a href="index.html">Принятие</a></div>
+    <div class="nav-field"><a href="comments.html">Отзывы</a></div>
+    <div class="nav-field"><a href="about.html">О нас</a></div>
+    <div class="nav-field"><a href="certificates.html">Сертификаты</a></div>
+    <div class="nav-field"><a href="#login">Кабинет</a></div>
+</header>
+<main>
+    <div class="row row-cols-2">
+        <div class="col">
+            <div class="helps-items-container">
+                <figure>
+                    <img src="assets/images/main-page/helps-item-1.svg" alt="helps-item-1"/>
+                    <figcaption>Наладить гармоничные отношения<br>с близкими и родными</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/images/main-page/helps-item-2.svg" alt="helps-item-2"/>
+                    <figcaption>Научиться говорить «Нет»<br>и отстаивать свои границы</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/images/main-page/helps-item-3.svg" alt="helps-item-3"/>
+                    <figcaption>Принять себя и повысить свою<br>самооценку</figcaption>
+                </figure>
+                <figure>
+                    <img src="assets/images/main-page/helps-item-4.svg" alt="helps-item-4"/>
+                    <figcaption>Справиться с тревогой<br>и почувствовать спокойствие</figcaption>
+                </figure>
+            </div>
+        </div>
+        <div class="col">
+            <div class="banners-container">
+                <div class="dummy"></div>
+                <div class="banners-container-elements">
+                    <div></div>
+                    <div></div>
+                    <div class="hvr-glow"><a>Начать<br/>психотерапию</a></div>
+                    <div>Консультация с<br/>психотерапевтом</div>
+                    <div>1,500 за сессию, ~50 минут</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<div class="mini-logo-box"><a href="index.html"><img src="assets/images/common/logo-no-stroke.svg" alt="logo"></a></div>
+<div class="faq-box">
+    <a>
+        <figure class="hvr-bob">
+            <img src="assets/images/common/faq-messenger.svg" alt="faq-messenger">
+            <figcaption>Messenger</figcaption>
+        </figure>
+    </a>
+    <a>
+        <figure class="hvr-bob">
+            <img src="assets/images/common/faq-telegram.svg" alt="faq-telegram">
+            <figcaption>Telegram</figcaption>
+        </figure>
+    </a>
+    <a>
+        <figure class="hvr-bob">
+            <img src="assets/images/common/faq-whatsapp.svg" alt="faq-whatsapp">
+            <figcaption>WhatsApp</figcaption>
+        </figure>
+    </a>
+</div>
+<div id="login" class="login-box">
+    <div class="login-content">
+        <form>
+            <div class="mb-3">
+                <label for="loginField" class="form-label">Логин</label>
+                <input type="email" class="form-control" id="loginField">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Пароль</label>
+                <input type="password" class="form-control" id="password">
+            </div>
+            <div class="login-others mb-3">
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input bg-secondary" id="doNotLogout">
+                    <label class="form-check-label" for="doNotLogout">Не выходить</label>
+                </div>
+                <a class="login-register" href="#">У меня нет аккаунта</a>
+            </div>
+            <button type="submit" class="btn">Вход</button>
+        </form>
+        <a class="login-close" href="#">&times;</a>
+    </div>
+</div>
+<script>document.body.classList.remove('preload')</script>
+</body>
+</html>

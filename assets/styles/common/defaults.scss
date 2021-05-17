@@ -1,0 +1,82 @@
+$color-primary: #41e2d1;
+$color-primary-dark: #22bcac;
+
+$color-dark: #000;
+$color-medium: #999;
+$color-lighty: #EFF;
+$color-light: #FFF;
+
+$default-transition-time: 200ms;
+
+$page-level-2: 1500px;
+$page-level-3: 920px;
+$page-min-width: 720px;
+
+$header-height: 160px;
+$header-padding: 40px;
+
+/*
+attribute ordering convention:
+mixins
+alignment items (ie display)
+alignment self
+size
+visual
+font & text
+transitions
+ */
+
+html {
+  background-color: $color-light;
+  font-family: Candara, serif;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  min-width: $page-min-width;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+@mixin color-scheme-primary {
+  color: $color-light;
+  background-color: $color-primary;
+}
+
+@mixin color-scheme-primary-dark {
+  color: $color-light;
+  background-color: $color-primary-dark;
+}
+
+@mixin color-scheme-primary-inverted {
+  color: $color-primary;
+  background-color: $color-light;
+}
+
+@mixin center-items-by-translate {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin center-items-by-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin center-items-by-grid {
+  display: grid;
+  place-items: center;
+}
+
+@mixin ease-transition {
+  transition: all $default-transition-time ease-in-out;
+}

@@ -1,0 +1,186 @@
+@import "3rd-party/hover/hover.css";
+@import "common/defaults";
+@import "common/header";
+@import "common/faq";
+@import "common/login";
+
+main {
+  @include ease-transition;
+  position: absolute;
+  top: $header-height;
+  width: 100%;
+  height: calc(100% - #{$header-height});
+  .row {
+    height: fit-content;
+    min-height: 100%;
+    margin: 0;
+    min-width: $page-min-width;
+    .col {
+      @include center-items-by-grid;
+      padding: 10px;
+      min-height: 100%;
+    }
+    .col:nth-child(1) {
+      @include center-items-by-grid;
+      height: fit-content;
+    }
+  }
+}
+
+.helps-items-container {
+  @include ease-transition;
+  @include center-items-by-grid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) 0.2fr repeat(2, 1fr);
+  grid-template-rows: repeat(10, 1fr);
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  width: auto;
+  height: auto;
+  figure {
+    width: auto;
+    img {
+      width: 300px;
+    }
+    figcaption {
+      text-align: center;
+      white-space: nowrap;
+    }
+  }
+  figure:nth-child(1) {
+    grid-area: 2 / 1 / 6 / 3;
+  }
+  figure:nth-child(2) {
+    grid-area: 1 / 4 / 5 / 6;
+  }
+  figure:nth-child(3) {
+    grid-area: 7 / 1 / 11 / 3;
+  }
+  figure:nth-child(4) {
+    grid-area: 6 / 4 / 10 / 6;
+  }
+}
+
+$start-button-margin: 0.5fr;
+
+.banners-container {
+  display: inline-block;
+  position: relative;
+  margin-bottom: $header-padding;
+  width: 80%;
+
+  .dummy {
+    margin-top: 80%;
+  }
+
+  .banners-container-elements {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) $start-button-margin repeat(2, (2 - $start-button-margin)) $start-button-margin;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    div {
+      @include center-items-by-flex;
+      color: $color-light;
+      text-align: center;
+    }
+    div:nth-child(1) {
+      grid-area: 1 / 1 / 5 / 5;
+      background-color: $color-primary-dark;
+    }
+    div:nth-child(2) {
+      grid-area: 3 / 3 / 7 / 7;
+      background-color: $color-primary;
+    }
+    div:nth-child(3) {
+      grid-area: 4 / 4 / 6 / 6;
+      background-color: $color-primary-dark;
+    }
+    div:nth-child(4) {
+      grid-area: 1 / 1 / 3 / 5;
+      font-size: 35px;
+    }
+    div:nth-child(5) {
+      grid-area: 6 / 3 / 7 / 7;
+    }
+    a, a:hover {
+      @include center-items-by-flex;
+      width: 100%;
+      height: 100%;
+      font-size: 30px;
+      text-decoration: none;
+      text-align: center;
+      cursor: pointer;
+      color: inherit;
+    }
+  }
+}
+
+@media only screen and (max-width: $page-level-2) {
+  .helps-items-container {
+    figure {
+      img {
+        width: 250px;
+      }
+      font-size: 14px;
+    }
+  }
+  .banners-container {
+    .banners-container-elements {
+      div:nth-child(4) {
+        font-size: 26px;
+      }
+      a, a:hover {
+        font-size: 22px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $page-level-3) {
+  main {
+    top: $header-height - $header-padding * 2;
+    height: calc(100% - #{$header-height - $header-padding * 2});
+  }
+  .helps-items-container {
+    display: block;
+  }
+
+  .banners-container {
+    @include center-items-by-flex;
+    width: 100%;
+    .banners-container-elements {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(5, 1fr);
+      div {
+        @include color-scheme-primary-inverted;
+        margin: 0 40px;
+      }
+      div:nth-child(1) {
+        grid-area: 1 / 1 / 6 / 2;
+      }
+      div:nth-child(2) {
+        grid-area: 1 / 1 / 6 / 2;
+      }
+      div:nth-child(3) {
+        @include color-scheme-primary-dark;
+        grid-area: 3 / 1 / 4 / 2;
+      }
+      div:nth-child(4) {
+        grid-area: 1 / 1 / 3 / 2;
+      }
+      div:nth-child(5) {
+        grid-area: 4 / 1 / 6 / 2;
+      }
+      a, a:hover {
+        font-size: 18px;
+      }
+    }
+  }
+}

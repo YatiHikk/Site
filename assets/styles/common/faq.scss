@@ -1,0 +1,33 @@
+@import "defaults";
+
+.faq-box {
+  @include center-items-by-flex;
+  position: fixed;
+  right: 25px;
+  bottom: 0;
+  transition-duration: 0ms;
+  transition-delay: 0ms;
+  figure {
+    @include center-items-by-grid;
+    width: 70px;
+    cursor: pointer;
+    figcaption {
+      white-space: nowrap;
+      text-align: center;
+      color: $color-medium;
+      font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (max-width: $page-level-3) {
+  .faq-box {
+    figure {
+      figcaption {
+        overflow: hidden;
+        width: 0;
+        height: 0;
+      }
+    }
+  }
+}

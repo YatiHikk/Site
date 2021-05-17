@@ -1,0 +1,30 @@
+@import "../3rd-party/hover/hover.css";
+/*
+attribute ordering convention:
+mixins
+alignment items (ie display)
+alignment self
+size
+visual
+font & text
+transitions
+ */
+html {
+  background-color: #FFF;
+  font-family: Candara, serif;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  min-width: 720px;
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+
+/*# sourceMappingURL=defaults.css.map */

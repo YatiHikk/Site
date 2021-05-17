@@ -1,0 +1,35 @@
+@import "3rd-party/hover/hover.css";
+@import "common/defaults";
+@import "common/header";
+@import "common/faq";
+@import "common/login";
+
+main {
+  @include center-items-by-grid;
+  padding: 50px 50px 100px;
+  width: 100%;
+  height: fit-content;
+  min-height: calc(100% - #{$header-height} - 150px);
+
+  .card {
+    height: 100%;
+    text-align: center;
+    .card-body {
+      @include center-items-by-grid;
+      height: calc(100% - 50px);
+      padding: 32px 16px;
+      .card-text {
+        text-align: left;
+      }
+    }
+    .card-footer {
+      @include color-scheme-primary-dark;
+      @include center-items-by-grid;
+      place-items: end;
+      p {
+        margin: 0;
+        text-align: right;
+      }
+    }
+  }
+}

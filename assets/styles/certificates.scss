@@ -1,0 +1,47 @@
+@import "3rd-party/hover/hover.css";
+@import "common/defaults";
+@import "common/header";
+@import "common/faq";
+@import "common/login";
+
+main {
+  @include center-items-by-grid;
+  padding: 50px 50px 100px;
+  width: 100%;
+  height: fit-content;
+  min-height: calc(100% - #{$header-height} - 150px);
+
+  .card {
+    height: 100%;
+    text-align: center;
+    .card-header {
+      @include center-items-by-grid;
+      width: 100%;
+      p {
+        margin: 0;
+      }
+      p:nth-child(1) {
+        font-weight: lighter;
+        font-size: 100px;
+      }
+      p:nth-child(2)
+      {
+        margin-bottom: 16px;
+      }
+    }
+    .card-body {
+      @include center-items-by-grid;
+      padding: 32px 16px;
+    }
+    .card-footer {
+      @include center-items-by-grid;
+      p {
+        margin: 16px 0;
+        font-size: 28px;
+      }
+      button {
+        @include color-scheme-primary-dark;
+      }
+    }
+  }
+}
